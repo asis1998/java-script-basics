@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8a excercise</title>
+
+</head>
+<body>
+  <script>
+
+  let amazonBasket = {
+    name : 'basketball',
+    price : 2095,
+  }
+  console.log(amazonBasket);
+  amazonBasket.price = 2095 + 500 ;
+  console.log(amazonBasket);
+
+  amazonBasket['delivery-time']= '3 days' ;
+  console.log(amazonBasket);
+
+  function comparePrice(product1,product2){
+  product1 = {
+    name: 'rice',
+    price : 50 ,
+  };
+  product2 = {
+    name: 'cotton candy',
+    price: 60,
+  }
+  product1.price >product2.price ? console.log(product1) : console.log(product2);
+
+  }
+  comparePrice();
+
+  </script>
+  
+</body>
+</html>
