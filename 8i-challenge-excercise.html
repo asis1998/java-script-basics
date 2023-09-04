@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick="
+      overAll('heads');
+
+      
+      ">heads</button>
+    <button onclick="
+    overAll('tails');
+
+    
+    ">tails</button>
+
+    <button onclick="
+   score= {
+    win: 0,
+    loose: 0,
+   }
+   localStorage.setItem('score',JSON.stringify(score));
+
+    ">Reset</button>
+    <script>
+      function overAll(pick){
+      let num= Math.random();
+      num >=0 && num < 1/2 ? computerMove = 'heads' : computerMove='tails' ;
+      console.log(computerMove);
+      let guess=pick;
+      guess === computerMove ? result='you win' : result= 'you loose' ;
+      console.log(result);
+      let score= JSON.parse( localStorage.getItem('score')) || {
+        win: 0 ,
+        loose: 0 ,
+      }
+      result === 'you win' ? score.win++ :score.loose++ ;
+      console.log(`You picked ${guess}. computer picked ${computerMove}. ${result} Win: ${score.win} loose :${score.loose}.`) ;
+      localStorage.setItem('score',JSON.stringify(score));
+      return score;
+    }
+      
+    </script>
+  </body>
+</html>
