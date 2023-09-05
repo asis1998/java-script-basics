@@ -5,7 +5,7 @@
   </head>
   <body>
     <button onclick="
-      console.log(`Cart quantity: ${cartQuantity}`);
+      paragraphQuantiy();
     ">Show Quantity</button>
 
     <button onclick="
@@ -45,26 +45,37 @@
     <button onclick="
       cartQuantity = 0;
       console.log('Cart was reset.');
-      console.log(`Cart quantity: ${cartQuantity}`);
+      paragraphQuantiy();
+      localStorage.setItem('cartQuantity',JSON.stringify(cartQuantity));
+      
     ">Reset Cart</button>
+    <p class="js-quantity-paragraph"></p>
 
    
 
     <script>
+       
+      function paragraphQuantiy(){
+  document.querySelector('.js-quantity-paragraph')
+  .innerHTML =`Cart Quantity: ${cartQuantity}` ;
+}
      
 
-      let cartQuantity = 0;
+      let cartQuantity = JSON.parse(localStorage.getItem('cartQuantity')) || 0;
       function updateCartQuantity(num){
         
-        if (cartQuantity + num > 10) {
-        alert('The cart is full');
-      } else {
-        cartQuantity+= num;
-        console.log(`Cart quantity: ${cartQuantity}`);
-        return cartQuantity ;
+        if (cartQuantity + num >= 8 && cartQuantity + num < 10) {
+        alert('The cart is almost full');
+      } else if(cartQuantity + num >= 10) {
+        alert('the cart is full');
       }
+      cartQuantity+= num;
+      localStorage.setItem('cartQuantity',JSON.stringify(cartQuantity));
+      paragraphQuantiy();
+      return cartQuantity ;
 
       }
+      paragraphQuantiy();
     </script>
   </body>
 </html>

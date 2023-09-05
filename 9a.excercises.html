@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9a excercise</title>
+
+</head>
+<body>
+  <button class="js-heads-button" onclick="
+  selector('heads');
+  ">heads</button>
+  <button class="js-tails-button" onclick="
+   selector('tails');
+  ">tails</button>
+  <p class="js-paragraph"></p>
+
+  <input type="text" placeholder="Name" class="js-input-name" onkeydown="
+  keyDownEnter(event);
+  ">
+
+  <input type="text" class="js-text-input" onkeyup="
+  document.querySelector('.js-text-paragraph')
+  .innerHTML = value ;
+  ">
+  <p class="js-text-paragraph"></p>
+  <button onclick="
+  inputName();
+  ">Submit</button>
+  <p class="js-paragraph2"></p>
+  
+</body>
+<script>
+// const button = document.querySelector('.js-heads-button');
+// console.log(button);
+
+// document.querySelector('.js-tails-button')
+// .innerHTML = 'tails done';
+function selector(select){
+  document.querySelector('.js-paragraph')
+  .innerHTML = `you chose: ${select}` ;
+  
+}
+
+function inputName (){
+  let inputElement = document.querySelector('.js-input-name');
+ 
+  let text = inputElement.value ;
+
+ document.querySelector('.js-paragraph2')
+ .innerHTML =`your name: ${text}` ;
+}
+
+function keyDownEnter(event){
+  if (event.key === 'Enter'){
+    inputName();
+  }
+}
+
+
+
+
+
+
+
+</script>
+</html>
