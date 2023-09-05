@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10e excercise</title>
+  <style>
+    .js-button {
+      background: rgb(213, 205, 205);
+      font-size: 15px;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .is-toggled{
+      background: rgb(20, 20, 20);
+      color: white;
+      font-size: 15px;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="js-button-1 js-button" onclick="
+    isToggle('.js-button-1');
+    ">Gaming</button>
+  <button class="js-button-2 js-button" onclick="
+    isToggle('.js-button-2');
+    ">Music</button>
+  <button class="js-button-3 js-button" onclick="
+    isToggle('.js-button-3');
+    ">Tech</button>
+
+  <script>
+
+    
+    function isToggle(selector){
+      let button= document.querySelector(selector);
+      if(!button.classList.contains('is-toggled')){
+        turnOffPreviousButton()
+        button.classList.add('is-toggled')
+      }else{
+        button.classList.remove('is-toggled')
+      }
+    }
+
+    function turnOffPreviousButton(){
+     const  previousButton= document.querySelector('.is-toggled') ;
+     if(previousButton){
+      previousButton.classList.remove('is-toggled');
+     }
+    }
+  </script>
+  
+</body>
+</html>

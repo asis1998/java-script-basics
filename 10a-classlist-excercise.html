@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10a excercise</title>
+  <style>
+.yellow-cart{
+  background: rgb(215, 216, 20);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+.request{
+  background: black;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 8px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.schedule{
+  background: rgb(230,230,230);
+  border:none;
+  padding: 10px 30px;
+  border-radius: 8px;
+}
+.toggle-button{
+  background: rgb(213, 205, 205);
+  font-size: 15px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.is-toggled{
+  background: rgb(20, 20, 20);
+  color: white;
+  font-size: 15px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+  <button class="yellow-cart">Add to Cart</button> <br>
+  <button class="request">Request now</button>
+  <button class="schedule">Schedule for later</button> <br>
+  <button class="js-button" onclick="
+
+  ">Test</button> <br><br><br><br><br><br>
+
+  <button class="toggle-button" onclick="
+  isToggle();
+  ">Gaming</button>
+  
+
+
+  <script>
+    function isToggle(){
+      let button  = document.querySelector('.toggle-button');
+     
+        if(!button.classList.contains('is-toggled')){
+         
+         button.classList.add('is-toggled');
+        }else{
+      
+        
+          button.classList.remove('is-toggled');
+        
+        }
+      }
+    
+
+
+
+    
+ 
+  </script>
+  
+</body>
+</html>
