@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+</head>
+<body>
+  <p> Todo List Practice</p>
+  
+  <input type="text" placeholder="Todo name" class="js-name-value">
+  <input type="date" class="js-value-date">
+  <button class="js-button js-input-selector" onclick="
+  //  addToList();
+  addToDo();
+   ">Add</button>
+  <div class="js-name-date"></div>
+  
+</body>
+
+<script>
+  
+  
+  
+  
+//   let arg=[{
+//     name: 'cook rice',
+//     dueDate:'2023-02-05'
+//   },
+//   {
+//     name:'cook dinner',
+//     dueDate :'2024-03-04'
+//   }];
+//   function addToList(){
+//     let inputElement = document.querySelector('.js-name-value');
+//     let name = inputElement.value ;
+//     let dateInputElement = document.querySelector('.js-value-date');
+//     let dueDate = dateInputElement.value ;
+//     arg.push({
+//       name,
+//       dueDate});
+    
+//     addToHtml();
+//   }
+//   function addToHtml(){
+//     let htmlToDo='';
+//   for (i = 0 ; i< arg.length; i++){
+//   let num = arg[i];
+//   const name = num.name ;
+//   const dueDate = num.dueDate ;
+//   console.log(dueDate);
+//   let html = `<p>${name} ${dueDate} <button onclick="arg.splice(${i},1); addToHtml();">delete</button></p>`;
+//   htmlToDo += html ;
+ 
+  
+  
+// }
+// document.querySelector('.js-name-date')
+// .innerHTML = htmlToDo;
+
+// }
+let arg=[{
+  name:'',
+  dueDate:''
+}];
+function addToDo(){
+let inputElement = document.querySelector('.js-name-value');
+let name = inputElement.value ;
+let inputValue=document.querySelector('.js-value-date');
+let dueDate=inputValue.value ;
+arg.push({name,dueDate});
+htmlToDoList();
+
+console.log(name,dueDate);
+}
+
+function htmlToDoList(){
+let htmlToDo='' ;
+for(i = 0 ; i < arg.length; i++){
+  let num = arg[i];
+  let {name} = num ;
+  let dueDate=num.dueDate ;
+  if (name !== '' && dueDate !==''){
+  const html = `<p>${name} ${dueDate} <button onclick="arg.splice(${i},1); htmlToDoList();">delete</button></p>`; 
+  htmlToDo += html ;
+  }
+}
+document.querySelector('.js-name-date')
+.innerHTML = htmlToDo ;
+}
+      
+      
+    
+  
+ 
+</script>
+</html>

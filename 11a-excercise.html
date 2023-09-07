@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11a excercise</title>
+
+</head>
+<body>
+
+  <script>
+    // let nums=[10,20,30];
+    // nums[2]= 99 ;
+    // console.log(nums);
+
+  //   function getLastValue(array){
+  //     let lastValue = array.length-1;
+  //    return array[lastValue];
+  //   }
+  //  console.log(getLastValue([10,30,20]));
+  //  console.log(getLastValue([1,20,22,24,5]))
+
+  // function getLastArray(array){
+  //   let lastArray = array.length - 1;
+  //    let lastValue =array[lastArray];
+  //    console.log(lastValue);
+    
+
+  // }
+
+  // getLastArray([1,20,22,24,5]);
+  // getLastArray(['hi','hello','good']);
+
+  // function arraySwap(array){
+  //   let lastIndex = array.length -1 ;
+  //   let lastValue=array[lastIndex];
+  //   let firstValue= array[0];
+  //   array[0] = lastValue ;
+  //   array[lastIndex]=firstValue;
+
+  //   console.log(array);
+
+  // }
+  // arraySwap([1,2,3]);
+  // arraySwap([1,20,22,24,5]);
+  // arraySwap(['hi','hello','good']);
+
+  // for(i = 5 ; i >= 0 ; i--){
+  //   console.log(i);
+  // }
+// using while loop 
+  // let i = 0 ;
+  // while(i <= 10){
+  //   console.log(i);
+  //   i+=2 ;
+    
+  // }
+
+  // let i= 5;
+  // while(i >=0){
+  //   console.log(i);
+  //   i--;
+  // }
+// let nums=[1,2,3] ;
+// let result = [];
+//   for( i=0 ; i < nums.length ; i++){
+// index =nums[i] + 1 ;
+// result.push(index);
+
+
+
+// }
+// console.log(result);
+
+// function addOne(array){
+// let result = [];
+//   for( i=0 ; i < array.length ; i++){
+// index =array[i] + 1 ;
+// result.push(index);
+
+
+
+// }
+// console.log(result);
+// }
+
+// addOne([1,2,3]);
+// addOne([-2,-1,0,99]); 
+
+
+// function addNum(array,num){
+// let arg = [];
+// for ( i = 0 ; i< array.length ; i++){
+//   let nums = array[i] + num ;
+//   arg.push(nums);
+
+
+// }
+// console.log(arg);
+// }
+// addNum([1,2,3],2);
+// addNum([1,2,3],3);
+
+
+
+// function addArrays(array1,array2){
+// let arg=[];
+// for (i = 0 ; i < array1.length ; i++){
+//   const nums = array1[i] + array2[i];
+//   arg.push(nums);
+// }
+// console.log(arg);
+// }
+
+// addArrays([1,1,2],[1,1,3]);
+// addArrays([1,2,3],[4,5,6]);
+
+
+
+// 11k excercise
+
+
+// function countPositive(nums){
+//   let greaterThanZero = 0 ;
+//   for(i = 0 ; i < nums.length ; i++){
+//     num=nums[i];
+//     if(num > 0){
+//       greaterThanZero+=1
+//     }
+//   }
+//   console.log(greaterThanZero);
+// }
+
+// countPositive([1,-3,5]);
+// countPositive([-2,3,-5,7,10])
+
+
+
+// 11L excercise 
+
+/*function minMax(nums){
+  let obj= {
+    min: null,
+    max: null,
+  };
+  for(i = 0 ; i < nums.length ; i++){
+  const num = nums[i] ;
+  if (num < obj.min || obj.min === null){
+   obj.min = num ;
+  }
+  if (num > obj.max || obj.max ===null){
+   obj.max = num
+
+  }
+}
+ 
+  console.log(obj);
+
+}
+
+
+minMax([3]);*/ 
+
+
+// 11N excercise
+
+function countWords(words){
+  let obj ={
+    apple : 0,
+    grape : 0,
+  }
+
+  for (i = 0; i < words.length; i++){
+    const num = words[i];
+    if (num === 'apple'){
+      obj.apple+=1 ;
+    }
+    if (num === 'grape'){
+      obj.grape+=1 ;
+    }
+  }
+  console.log(obj);
+}
+countWords(['apple','grape','apple','apple']);
+
+
+  </script>
+  
+</body>
+</html>
