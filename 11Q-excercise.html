@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11Q-excercise</title>
+</head>
+<body>
+
+  <script>
+    function findIndex(array,word){ 
+      index = -1 ;
+      for (i = 0; i < array.length; i++){
+        if(array[i] === word){
+          index = i ;
+          break ;
+        }
+      }
+      // console.log(index);
+    }
+
+    findIndex(['green','red','blue','red'],'yellow');
+
+    function removeEgg(foods){
+      let copyFoods= foods.slice() ;
+       let reversedFoods = copyFoods.reverse(foods);
+      let minusFood=[];
+      let eggRemoved = 0 ;
+      for(i = 0; i < foods.length; i++){
+        if (foods[i] === 'egg' && eggRemoved < 2){
+          eggRemoved++
+          continue ;
+          removeEgg(foods);
+         
+        }
+        minusFood.push(foods[i]);
+        
+      }
+      console.log(minusFood);
+      console.log(copyFoods);
+      console.log(reversedFoods);
+      console.log(foods);
+
+    }
+
+    removeEgg(['egg','apple','egg','egg','ham']);
+
+  </script>
+  
+</body>
+</html>

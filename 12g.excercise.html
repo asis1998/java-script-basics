@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>app</title>
+</head>
+<body>
+  <button onclick="
+    addOnclick();
+    ">Add</button>
+  <button onclick="
+  subtractOnclick();
+  ">Remove</button>
+
+  <script>
+    let timeOutId;
+let num= 0 ;
+    function addOnclick(){
+      num++ ;
+    
+      clearTimeout(timeOutId);
+      ifStatement();
+     
+        
+    return num;
+  }
+    function subtractOnclick(){
+      num-- ;
+     
+      clearTimeout(timeOutId);
+      ifStatement();
+  
+        
+    return num;
+  }
+
+  function ifStatement(){
+    timeOutId=setInterval(function(){
+    if(num > 0){
+      
+      if (document.title === 'app'){
+        document.title = `(${num}) New Message` ;
+      }else{
+        document.title= 'app';
+      }}else{
+      document.title= 'app';
+    }},1000);
+  }
+
+  
+  </script>
+
+</body>
+</html>

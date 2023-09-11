@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12a excercise</title>
+  <style>
+    .js-decorate{
+      margin-left: 40px;
+    }
+  </style>
+</head>
+<body>
+  <button  class ="js-button" onclick="
+    button();
+    ">
+    Start
+  </button>
+  <button class="js-button2" onclick="
+  addToCart();
+  ">Add to Cart</button>
+  <p class="js-paragraph"></p>
+
+  <script>
+  
+   
+    const add = function (){
+      console.log(2+3);
+    }
+
+    add();
+    add();
+
+    function runTwice(fun){
+      fun();
+      fun();
+    }
+
+    runTwice(function(){
+      console.log('12b');
+    });
+
+    function button(){
+
+      let num =document.querySelector('.js-button') ;
+     num.innerHTML ='Loading...';
+      setTimeout(function(){
+        num.innerHTML = `Finished!` ;
+      },1000);
+  };
+
+  // let timeIntervalId;
+  function addToCart(){
+    let num = document.querySelector('.js-paragraph');
+    html = `<p class="js-decorate">Added</p>` ;
+    num.innerHTML= html ;
+  //  clearInterval(timeIntervalId);
+   setTimeout(function() {
+          num.innerHTML = '';
+        }, 2000);
+  }
+  
+
+     
+
+        
+        
+    
+
+
+  </script>
+  
+</body>
+</html>
